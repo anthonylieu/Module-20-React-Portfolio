@@ -11,7 +11,7 @@ const SkillBar = ({ data, categories }) => {
   // Define the style for the title. The background color is determined by the category's color.
   const titleStyle = {
     background: categories
-      .filter((cat) => category.includes(cat.name)) // Filter out the category that matches with the 'category' from 'data'
+      .filter((cat) => category.includes(cat.name))
       .map((cat) => cat.color)[0], // Map to get the color of the matched category
   };
 
@@ -35,7 +35,7 @@ const SkillBar = ({ data, categories }) => {
 // This is used for type checking the props of the component
 SkillBar.propTypes = {
   data: PropTypes.shape({
-    category: PropTypes.arrayOf(PropTypes.string).isRequired, // category is required and should be an array of strings
+    category: PropTypes.arrayOf(PropTypes.string).isRequired,
     competency: PropTypes.number.isRequired, // competency is required and should be a number
     title: PropTypes.string.isRequired, // title is required and should be a string
   }).isRequired, // data itself is required

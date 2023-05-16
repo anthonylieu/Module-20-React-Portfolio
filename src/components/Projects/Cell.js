@@ -8,20 +8,14 @@ import dayjs from 'dayjs'; // Library for parsing, validating, manipulating, and
 const Cell = ({ data }) => (
   // Container for each cell
   <div className="cell-container">
-    // Mini post/article within each cell
     <article className="mini-post">
-      // Header section of each mini post
       <header>
-        // Post title as a hyperlink
         <h3><a href={data.link}>{data.title}</a></h3>
-        // Formatted date of the post
         <time className="published">{dayjs(data.date).format('MMMM, YYYY')}</time>
       </header>
-      // Image related to the post with alt text as post title
       <a href={data.link} className="image">
         <img src={`${process.env.PUBLIC_URL}${data.image}`} alt={data.title} />
       </a>
-      // Description of the post
       <div className="description">
         <p>{data.desc}</p>
       </div>
