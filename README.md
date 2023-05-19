@@ -16,8 +16,7 @@ This is my portfolio built with React. It contains a brief bio, my projects, and
 ## Installation
 <br>To get this app to work:</br>
 <br>Clone this repo.</br>
-<br>`npm i`</br>
-<br>Start server with 'npm start'</br>
+<br>`npm i && npm start`</br>
 
 ## License
 
