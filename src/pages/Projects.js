@@ -19,7 +19,13 @@ const Projects = () => (
       </header>
       {data.map((project) => (
         <Cell
-          data={project}
+          data={{
+            ...project,
+            linkProps: {
+              target: '_blank',
+              rel: 'noopener noreferrer',
+            },
+          }}
           key={project.title}
         />
       ))}
