@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import ContactIcons from '../Contact/ContactIcons';
+import ContactIcons from "../Contact/ContactIcons";
 
 const { PUBLIC_URL } = process.env; // set automatically from package.json:homepage
 
@@ -13,7 +13,9 @@ const SideBar = () => (
       </Link>
       <header>
         <h2>Anthony Lieu</h2>
-        <p><a href="mailto:anthonylieu1@gmail.com">anthonylieu1@gmail.com</a></p>
+        <p>
+          <a href="mailto:anthonylieu1@gmail.com">anthonylieu1@gmail.com</a>
+        </p>
       </header>
     </section>
 
@@ -25,14 +27,22 @@ const SideBar = () => (
       </p> */}
       <ul className="actions">
         <li>
-          {!window.location.pathname.includes('/resume') ? <Link to="/resume" className="button">Learn More</Link> : <Link to="/about" className="button">About Me</Link>}
+          {!window.location.pathname.includes("/resume") ? (
+            <Link to="/resume" className="button">
+              Learn More
+            </Link>
+          ) : (
+            <Link to="/about" className="button">
+              About Me
+            </Link>
+          )}
         </li>
       </ul>
     </section>
 
     <section id="footer">
       <ContactIcons />
-      <p className="copyright">&copy; Anthony Lieu.</p>
+      <p className="copyright">&copy; Anthony Lieu 2023.</p>
     </section>
   </section>
 );
